@@ -1,0 +1,17 @@
+{
+  "name": "ex-dia Web",
+  "short_name": "ex-dia",
+  "description": "OuDiaSecond互換ダイヤグラム・時刻表・箱ダイヤ・番線在線表統合エディタ",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#1E293B",
+  "icons": [
+    {
+      "src": "./exdia-icon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
