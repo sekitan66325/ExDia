@@ -1,6 +1,6 @@
 {
-  "name": "ex-dia Web",
-  "short_name": "ex-dia",
+  "name": "ExDia Web",
+  "short_name": "ExDia",
   "description": "OuDiaSecond互換ダイヤグラム・時刻表・箱ダイヤ・番線在線表統合エディタ",
   "start_url": "./",
   "display": "standalone",
