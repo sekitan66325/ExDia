@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "exdia-cache-";
-const CACHE_NAME = "exdia-cache-v1.2.1-beta";
+const CACHE_NAME = "exdia-cache-v1.2.2-beta";
 
 const CORE_SHELL_URLS = [
   "./",
