@@ -32,10 +32,327 @@
 
       gtag('config', 'G-0GM4B0FTW9');
     </script>
-    <script type="module" crossorigin src="./assets/index-Cme7IJxU.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DmmYdEHn.css">
+    <!-- EXDIA_WEB_INTRO_HEAD_START -->
+    <style>
+      .intro-overlay {
+        display: none;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        html.intro-active .intro-overlay {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: fixed;
+          inset: 0;
+          z-index: 9999;
+          background-color: #FFFFFF;
+          clip-path: inset(0 0 0 0);
+          transition: clip-path 360ms cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        html.intro-active .intro-overlay.is-curtain-up {
+          clip-path: inset(0 0 100% 0);
+          pointer-events: none;
+        }
+
+        .intro-logo-svg {
+          width: min(440px, 74vw);
+          height: auto;
+          overflow: visible;
+        }
+
+        @media (max-width: 640px) {
+          .intro-logo-svg {
+            width: min(300px, 80vw);
+          }
+        }
+
+        .intro-icon {
+          transform: translateX(74px);
+          animation: exdiaIntroIconSlide 320ms cubic-bezier(0.77, 0, 0.175, 1) 820ms both;
+        }
+
+        .intro-bg-rect,
+        .intro-node {
+          transform-box: fill-box;
+          transform-origin: center;
+        }
+
+        .intro-bg-rect {
+          animation: exdiaIntroRectIn 220ms cubic-bezier(0.16, 1, 0.3, 1) 0ms both;
+        }
+
+        .intro-stroke {
+          stroke-dasharray: 1.08;
+          stroke-dashoffset: 1.08;
+          opacity: 0;
+        }
+
+        .intro-grid-1 {
+          animation: exdiaIntroStrokeDraw 170ms cubic-bezier(0.16, 1, 0.3, 1) 190ms both;
+        }
+
+        .intro-grid-2 {
+          animation: exdiaIntroStrokeDraw 170ms cubic-bezier(0.16, 1, 0.3, 1) 250ms both;
+        }
+
+        .intro-grid-3 {
+          animation: exdiaIntroStrokeDraw 170ms cubic-bezier(0.16, 1, 0.3, 1) 310ms both;
+        }
+
+        .intro-diag-sub {
+          animation: exdiaIntroStrokeDraw 210ms cubic-bezier(0.16, 1, 0.3, 1) 430ms both;
+        }
+
+        .intro-diag-main {
+          animation: exdiaIntroStrokeDraw 220ms cubic-bezier(0.16, 1, 0.3, 1) 530ms both;
+        }
+
+        .intro-node-1 {
+          animation: exdiaIntroNodeIn 150ms cubic-bezier(0.16, 1, 0.3, 1) 530ms both;
+        }
+
+        .intro-node-2 {
+          animation: exdiaIntroNodeIn 150ms cubic-bezier(0.16, 1, 0.3, 1) 620ms both;
+        }
+
+        .intro-node-3 {
+          animation: exdiaIntroNodeIn 150ms cubic-bezier(0.16, 1, 0.3, 1) 710ms both;
+        }
+
+        .intro-wm-stroke {
+          stroke-dasharray: 1.08;
+          stroke-dashoffset: 1.08;
+          opacity: 0;
+        }
+
+        .intro-wm-1 {
+          animation: exdiaIntroWordDraw 220ms cubic-bezier(0.16, 1, 0.3, 1) 900ms both;
+        }
+
+        .intro-wm-2 {
+          animation: exdiaIntroWordDraw 190ms cubic-bezier(0.16, 1, 0.3, 1) 950ms both;
+        }
+
+        .intro-wm-3 {
+          animation: exdiaIntroWordDraw 190ms cubic-bezier(0.16, 1, 0.3, 1) 1000ms both;
+        }
+
+        .intro-wm-4 {
+          animation: exdiaIntroWordDraw 220ms cubic-bezier(0.16, 1, 0.3, 1) 1050ms both;
+        }
+
+        .intro-wm-5 {
+          animation: exdiaIntroWordDraw 180ms cubic-bezier(0.16, 1, 0.3, 1) 1100ms both;
+        }
+
+        .intro-wm-dot {
+          animation: exdiaIntroNodeIn 150ms cubic-bezier(0.16, 1, 0.3, 1) 1135ms both;
+        }
+
+        .intro-wm-6 {
+          animation: exdiaIntroWordDraw 210ms cubic-bezier(0.16, 1, 0.3, 1) 1145ms both;
+        }
+
+        .intro-wm-7 {
+          animation: exdiaIntroWordDraw 170ms cubic-bezier(0.16, 1, 0.3, 1) 1190ms both;
+        }
+
+        .intro-skip {
+          position: absolute;
+          right: 24px;
+          bottom: 20px;
+          padding: 6px 12px;
+          font-family: inherit;
+          font-size: 12px;
+          font-weight: 600;
+          color: #64748b;
+          background: transparent;
+          border: 1px solid #e2e8f0;
+          border-radius: 3px;
+          cursor: pointer;
+          transition: color 140ms ease, background-color 140ms ease, border-color 140ms ease;
+        }
+
+        .intro-skip:hover {
+          color: #0f172a;
+          background-color: #f8fafc;
+          border-color: #cbd5e1;
+        }
+      }
+
+      @keyframes exdiaIntroRectIn {
+        from {
+          opacity: 0;
+          transform: scale(0.68);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes exdiaIntroStrokeDraw {
+        0% {
+          stroke-dashoffset: 1.08;
+          opacity: 0;
+        }
+        1% {
+          opacity: 1;
+        }
+        100% {
+          stroke-dashoffset: 0;
+          opacity: 1;
+        }
+      }
+
+      @keyframes exdiaIntroNodeIn {
+        from {
+          opacity: 0;
+          transform: scale(0);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes exdiaIntroIconSlide {
+        from {
+          transform: translateX(74px);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes exdiaIntroWordDraw {
+        0% {
+          stroke-dashoffset: 1.08;
+          opacity: 0;
+          transform: translateX(-6px);
+        }
+        1% {
+          opacity: 1;
+        }
+        100% {
+          stroke-dashoffset: 0;
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    </style>
+    <script>
+      (function () {
+        try {
+          var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          if (reduced) return;
+          if (sessionStorage.getItem('exdia_web_intro_seen')) return;
+          sessionStorage.setItem('exdia_web_intro_seen', '1');
+          document.documentElement.classList.add('intro-active');
+        } catch (_) {}
+      })();
+    </script>
+    <!-- EXDIA_WEB_INTRO_HEAD_END -->
+    <script type="module" crossorigin src="./assets/index-Ctfkdmar.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/vendor-react-Cn8aukCy.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-Dov9OPGy.css">
   </head>
   <body>
+    <!-- EXDIA_WEB_INTRO_BODY_START -->
+    <div class="intro-overlay" id="intro-overlay" aria-hidden="true">
+      <svg class="intro-logo-svg" viewBox="0 0 212 64" width="212" height="64" fill="none" aria-hidden="true">
+        <g class="intro-icon">
+          <rect class="intro-bg-rect" x="2" y="2" width="60" height="60" rx="15" fill="#2C6266" />
+          <line class="intro-stroke intro-grid-1" x1="12" y1="18" x2="52" y2="18" pathLength="1" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-opacity="0.25" />
+          <line class="intro-stroke intro-grid-2" x1="12" y1="32" x2="52" y2="32" pathLength="1" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-opacity="0.25" />
+          <line class="intro-stroke intro-grid-3" x1="12" y1="46" x2="52" y2="46" pathLength="1" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-opacity="0.25" />
+          <line class="intro-stroke intro-diag-sub" x1="17" y1="46" x2="47" y2="18" pathLength="1" stroke="#38BDF8" stroke-width="4.2" stroke-linecap="round" />
+          <line class="intro-stroke intro-diag-main" x1="17" y1="18" x2="47" y2="46" pathLength="1" stroke="#FFFFFF" stroke-width="4.4" stroke-linecap="round" />
+          <circle class="intro-node intro-node-1" cx="17" cy="18" r="3.4" fill="#2C6266" stroke="#FFFFFF" stroke-width="2.5" />
+          <circle class="intro-node intro-node-2" cx="32" cy="32" r="4.0" fill="#2C6266" stroke="#FFFFFF" stroke-width="2.6" />
+          <circle class="intro-node intro-node-3" cx="47" cy="46" r="3.4" fill="#2C6266" stroke="#FFFFFF" stroke-width="2.5" />
+        </g>
+        <g class="intro-wordmark" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+          <path class="intro-wm-stroke intro-wm-1" d="M97 18H78V46H97M78 32H94" pathLength="1" stroke="#2C6266" />
+          <line class="intro-wm-stroke intro-wm-2" x1="105" y1="46" x2="123" y2="25" pathLength="1" stroke="#0284C7" />
+          <line class="intro-wm-stroke intro-wm-3" x1="105" y1="25" x2="123" y2="46" pathLength="1" stroke="#2C6266" />
+          <path class="intro-wm-stroke intro-wm-4" d="M133 18H142A13 14 0 0 1 142 46H133Z" pathLength="1" stroke="#0F172A" />
+          <line class="intro-wm-stroke intro-wm-5" x1="165" y1="25.5" x2="165" y2="46" pathLength="1" stroke="#0F172A" />
+          <circle class="intro-node intro-wm-dot" cx="165" cy="18.2" r="2.7" fill="#2C6266" stroke="none" />
+          <circle class="intro-wm-stroke intro-wm-6" cx="184.5" cy="35.5" r="9.5" pathLength="1" stroke="#0F172A" />
+          <line class="intro-wm-stroke intro-wm-7" x1="194" y1="25.5" x2="194" y2="46" pathLength="1" stroke="#0F172A" />
+        </g>
+      </svg>
+      <button type="button" class="intro-skip" id="intro-skip" aria-label="オープニングをスキップ">Skip</button>
+    </div>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var overlay = document.getElementById('intro-overlay');
+        if (!overlay || !root.classList.contains('intro-active')) {
+          if (overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay);
+          return;
+        }
+        var animDone = false;
+        var appReady = Boolean(window.__exdiaIntroAppReady);
+        var closed = false;
+        var animTimer = 0;
+
+        function closeIntro() {
+          if (closed) return;
+          closed = true;
+          if (animTimer) window.clearTimeout(animTimer);
+          window.removeEventListener('keydown', onIntroKeyDown, true);
+          overlay.classList.add('is-curtain-up');
+          window.setTimeout(function () {
+            root.classList.remove('intro-active');
+            if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+          }, 380);
+        }
+
+        function tryFinishIntro() {
+          if (animDone && appReady) {
+            closeIntro();
+          }
+        }
+
+        function onIntroKeyDown(e) {
+          if (closed) return;
+          if (e.key === 'Escape' || e.key === 'Esc') {
+            e.preventDefault();
+            e.stopPropagation();
+            if (typeof e.stopImmediatePropagation === 'function') {
+              e.stopImmediatePropagation();
+            }
+            closeIntro();
+          }
+        }
+
+        window.__exdiaIntroNotifyAppReady = function () {
+          appReady = true;
+          tryFinishIntro();
+        };
+
+        overlay.addEventListener('click', function () {
+          closeIntro();
+        });
+        var skipBtn = document.getElementById('intro-skip');
+        if (skipBtn) {
+          skipBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            closeIntro();
+          });
+        }
+        window.addEventListener('keydown', onIntroKeyDown, true);
+        animTimer = window.setTimeout(function () {
+          animDone = true;
+          tryFinishIntro();
+        }, 1480);
+      })();
+    </script>
+    <!-- EXDIA_WEB_INTRO_BODY_END -->
     <div id="root"></div>
   </body>
 </html>

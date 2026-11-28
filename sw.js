@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "exdia-cache-";
-const CACHE_NAME = "exdia-cache-v1.2.10-beta";
+const CACHE_NAME = "exdia-cache-v1.3.0";
 
 const CORE_SHELL_URLS = [
   "./",
@@ -17,7 +17,7 @@ self.addEventListener("install", (event) => {
     caches
       .open(CACHE_NAME)
       .then((cache) => cache.addAll(CORE_SHELL_URLS))
-      .catch(() => {})
+      .catch(() => { })
       .then(() => self.skipWaiting())
   );
 });
